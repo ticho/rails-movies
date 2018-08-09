@@ -1,0 +1,33 @@
+<h1>Welcome, let's search a movie name and see what we come up with.</h1>
+
+<%= form_tag do  %>
+  <%= label_tag :movie_name, "Movie name :" %>
+  <%= text_field_tag :movie_name, nil, placeholder: 'Mononoke Hime'%>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+<% if @results && @results.count == 0%>
+  <h3>Sorry, no result for this query.</h3>
+<% elsif @results %>
+<table>
+<thead>
+<tr>
+  <th>Title</th>
+  <th>Release date</th>
+  <th>Director</th>
+  <th>Picture</th>
+</tr>
+</thead>
+<tbody>
+  <% @results.each do |result| %>
+    <tr>
+    <td><%= result.title %></td>
+    <td><%= result.release_date %></td>
+    <td><%= result.director %></td>
+    <td><%= image_tag result.img %></td>
+    </tr>
+  <% end %> 
+</tbody>
+</table>
+<% end %>

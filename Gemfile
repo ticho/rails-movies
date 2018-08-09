@@ -65,3 +65,5 @@ group :production do
   # use pg with heroku
   gem 'pg'
 end
+
+gem 'themoviedb'
