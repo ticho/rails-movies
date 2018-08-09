@@ -1,24 +1,19 @@
-# README
+# Rails Movies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[https://tibo-rails-movies.herokuapp.com/](https://tibo-rails-movies.herokuapp.com/)
 
-Things you may want to cover:
+Using `themoviedb` gem to get access to the movie database API.
 
-* Ruby version
+We use a master key for the heroku deployment.
 
-* System dependencies
+To install the app dependencies, start the db and seed it :
+```sh
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To start the run the app locally
+```sh
+$ rails s
+```
